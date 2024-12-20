@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '/logo.jpg'; // Ensure the correct path to your logo
+import logo from '/logo.png'; // Ensure the correct path to your logo
 
 export default function Footer() {
   return (

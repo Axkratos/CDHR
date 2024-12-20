@@ -1,6 +1,13 @@
 import React from 'react';
 
 export default function Header() {
+  const handleGetInvolvedClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="bg-white">
       <div className="container px-6 py-16 mx-auto">
@@ -16,7 +23,10 @@ export default function Header() {
                 Join us in strengthening democratic institutions, advocating for human rights,
                 and ensuring the voices of every individual are heard. Together, we can create a just and equitable society.
               </p>
-              <button className="w-full px-6 py-3 mt-8 text-lg font-medium text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-700 focus:outline-none focus:bg-blue-700">
+              <button
+                onClick={handleGetInvolvedClick}
+                className="w-full px-6 py-3 mt-8 text-lg font-medium text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+              >
                 Get Involved
               </button>
             </div>

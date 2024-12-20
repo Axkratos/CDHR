@@ -1,26 +1,30 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Blog() {
   const posts = [
     {
+      id: 1,
       title: 'Strengthening Local Democracy in Nepal',
       excerpt: 'How grassroots movements are shaping the future of democratic governance in Nepal.',
       date: 'Mar 16, 2024',
-      image: 'https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     },
     {
+      id: 2,
       title: 'Human Rights Education Initiative',
       excerpt: 'Empowering communities through knowledge and awareness of their fundamental rights.',
       date: 'Mar 12, 2024',
-      image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     },
     {
+      id: 3,
       title: 'Youth Participation in Democracy',
       excerpt: 'Engaging the next generation in democratic processes and civic participation.',
       date: 'Mar 8, 2024',
-      image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    }
+      image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    },
   ];
 
   return (
@@ -37,7 +41,7 @@ export default function Blog() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
-            <article key={post.title} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+            <article key={post.id} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
               <div className="flex-shrink-0">
                 <img className="h-48 w-full object-cover" src={post.image} alt={post.title} />
               </div>
@@ -54,10 +58,13 @@ export default function Blog() {
                   </p>
                 </div>
                 <div className="mt-6">
-                  <a href="#" className="flex items-center text-blue-600 hover:text-blue-500">
+                  <Link
+                    to={`/blog/${post.id}`}
+                    className="flex items-center text-blue-600 hover:text-blue-500"
+                  >
                     Read more
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>
