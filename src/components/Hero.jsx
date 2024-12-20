@@ -1,4 +1,5 @@
 import React from 'react';
+import Hero from '/hero.jpg'
 
 export default function Header() {
   const handleGetInvolvedClick = () => {
@@ -32,11 +33,11 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right Image "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"*/}
           <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
             <img
               className="h-72 w-full object-cover sm:h-80 md:h-96 lg:w-full lg:h-full"
-              src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              src={Hero}
               alt="Nepal landscape"
             />
           </div>
