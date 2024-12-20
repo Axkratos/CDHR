@@ -1,132 +1,132 @@
-import React, { useState } from 'react';
-import { Twitter, Facebook, Instagram, Youtube } from 'lucide-react';
+import React from 'react';
+import logo from '/logo.jpg'; // Assuming logo.jpg is in the same directory as this file
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
-  const links = [
-    {
-      title: 'Quick Links',
-      items: [
-        { label: 'About Us', href: '#about' },
-        { label: 'Our Mission', href: '#mission' },
-        { label: 'Team', href: '#team' },
-        { label: 'Contact', href: '#contact' },
-        { label: 'Blog', href: '#blog' }
-      ]
-    },
-    {
-      title: 'Resources',
-      items: [
-        { label: 'Publications', href: '/publications' },
-        { label: 'Research', href: '/research' },
-        { label: 'Media Kit', href: '/media-kit' },
-        { label: 'Annual Reports', href: '/reports' }
-      ]
-    }
-  ];
-
-  const socials = [
-    { icon: Twitter, href: 'https://twitter.com/cdhrnepal' },
-    { icon: Facebook, href: 'https://facebook.com/cdhrnepal' },
-    { icon: Instagram, href: 'https://instagram.com/cdhrnepal' },
-    { icon: Youtube, href: 'https://youtube.com/cdhrnepal' }
-  ];
-
-  const [email, setEmail] = useState('');
-
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    // Handle newsletter subscription
-    console.log('Newsletter subscription:', email);
-    setEmail('');
-  };
-
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About CDHR Section */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">About CDHR</h3>
-            <p className="text-gray-400 text-sm">
-              Working towards a more democratic and equitable Nepal through advocacy, 
-              education, and community engagement.
-            </p>
-            <div className="flex space-x-4">
-              {socials.map(({ icon: Icon, href }) => (
+    <footer className="bg-white">
+      <div className="container p-6 mx-auto">
+        <div className="lg:flex">
+          {/* Left Section */}
+          <div className="w-full lg:w-2/5 -mx-6">
+            <div className="px-6">
+              <img src={logo} alt="CDHR Nepal Logo" className="w-28 h-auto mb-4" />
+              <p className="max-w-sm text-lg text-gray-600">
+                CDHR Nepal is dedicated to preserving democratic rights and promoting human rights through education, advocacy, and grassroots mobilization. Join us in empowering communities and uplifting lives.
+              </p>
+              <div className="flex mt-6 -mx-2">
                 <a
-                  key={href}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  href="#"
+                  className="mx-3 text-gray-600 hover:text-blue-500 transition-colors duration-300 text-xl"
+                  aria-label="Facebook"
                 >
-                  <Icon className="h-5 w-5" />
+                  <i className="fab fa-facebook-f"></i>
                 </a>
-              ))}
+                <a
+                  href="#"
+                  className="mx-3 text-gray-600 hover:text-blue-500 transition-colors duration-300 text-xl"
+                  aria-label="Twitter"
+                >
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  className="mx-3 text-gray-600 hover:text-blue-500 transition-colors duration-300 text-xl"
+                  aria-label="Instagram"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Footer Links Section */}
-          <div className="grid grid-cols-1 space-y-4">
-            {links.map((section) => (
-              <div key={section.title} className="space-y-4">
-                <h3 className="text-lg font-semibold">{section.title}</h3>
-                <ul className="space-y-2">
-                  {section.items.map((link) => (
-                    <li key={link.label}>
-                      <a
-                        href={link.href}
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+          {/* Right Section */}
+          <div className="mt-8 lg:mt-0 lg:flex-1">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div>
+                <h3 className="text-xl text-gray-700 uppercase">About Us</h3>
+                <a
+                  href="#mission"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Mission
+                </a>
+                <a
+                  href="#team"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Team
+                </a>
+                <a
+                  href="#contact"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Contact
+                </a>
               </div>
-            ))}
-          </div>
 
-          {/* Newsletter Section */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Stay Updated</h3>
-            <p className="text-gray-400 text-sm">
-              Subscribe to our newsletter for updates on our work and impact.
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <button
-                type="submit"
-                className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
+              <div>
+                <h3 className="text-xl text-gray-700 uppercase">Programs</h3>
+                <a
+                  href="#education"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Education Initiatives
+                </a>
+                <a
+                  href="#advocacy"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Advocacy Campaigns
+                </a>
+                <a
+                  href="#community"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Community Outreach
+                </a>
+              </div>
+
+              <div>
+                <h3 className="text-xl text-gray-700 uppercase">Resources</h3>
+                <a
+                  href="#publications"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Publications
+                </a>
+                <a
+                  href="#reports"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Reports
+                </a>
+                <a
+                  href="#media"
+                  className="block mt-4 text-lg text-gray-600 hover:underline"
+                >
+                  Media Kit
+                </a>
+              </div>
+
+              <div>
+                <h3 className="text-xl text-gray-700 uppercase">Contact</h3>
+                <span className="block mt-4 text-lg text-gray-600">
+                  +977-1-XXXXXXX
+                </span>
+                <span className="block mt-4 text-lg text-gray-600">
+                  info@cdhrnepal.org
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Footer Bottom Section */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-          <p className="text-gray-400 text-sm">
-            © {currentYear} CDHR Nepal. All rights reserved.
+        <hr className="h-px my-8 bg-gray-200 border-none" />
+
+        <div>
+          <p className="text-center text-lg text-gray-600">
+            © CDHR Nepal {new Date().getFullYear()} - All rights reserved
           </p>
-          <div className="flex space-x-6 text-sm">
-            <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-              Privacy Policy
-            </a>
-            <a href="/terms" className="text-gray-400 hover:text-white transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>
