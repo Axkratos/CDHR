@@ -39,52 +39,48 @@ export default function Mission() {
   ];
 
   return (
-    <section id="mission" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="mission" className="py-12 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-5xl font-extrabold text-gray-900 sm:text-6xl">
-            Our Mission, Vision & Values
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Mission & Values
           </h2>
-          <p className="mt-8 max-w-3xl text-xl text-gray-600 lg:mx-auto">
-            We are dedicated to empowering Nepal's citizens and institutions through transparent governance, human rights advocacy, and inclusive practices.
+          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            Building a stronger democracy through collective action and advocacy
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {values.map((value) => {
-            const Icon = value.icon;
-            return (
-              <div
-                key={value.title}
-                className="relative bg-white shadow-lg rounded-lg p-8 hover:shadow-xl transition-shadow"
-              >
-                <div className="flex items-center justify-center h-20 w-20 rounded-full bg-blue-600 text-white mb-6">
-                  <Icon className="h-10 w-10" aria-hidden="true" />
+        <div className="mt-10">
+          <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+            {values.map((value) => {
+              const Icon = value.icon;
+              return (
+                <div key={value.title} className="relative">
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  </div>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{value.title}</p>
+                  <p className="mt-2 ml-16 text-base text-gray-500">{value.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-lg text-gray-600">{value.description}</p>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
-        <div className="mt-20">
-          <h3 className="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-10">
+        <div className="mt-16">
+          <h3 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
             Additional Initiatives
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {additionalContent.map((item) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={item.title}
-                  className="relative bg-white shadow-lg rounded-lg p-8 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center justify-center h-20 w-20 rounded-full bg-green-600 text-white mb-6">
-                    <Icon className="h-10 w-10" aria-hidden="true" />
+                <div key={item.title} className="relative">
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                    <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                  <p className="text-lg text-gray-600">{item.description}</p>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{item.title}</p>
+                  <p className="mt-2 ml-16 text-base text-gray-500">{item.description}</p>
                 </div>
               );
             })}

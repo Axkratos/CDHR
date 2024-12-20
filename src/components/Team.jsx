@@ -1,4 +1,12 @@
 import React from 'react';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Tooltip,
+} from "@material-tailwind/react";
 
 export default function Team() {
   const team = [
@@ -42,16 +50,19 @@ export default function Team() {
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Section: Featured Member */}
-          <div className="text-center lg:text-left">
-            <img
-              className="mx-auto lg:mx-0 w-1/1.5 h-auto object-cover shadow-lg rounded-md"
-
-              src={featuredMember.image}
-              alt={featuredMember.name}
-            />
-            <h3 className="mt-6 text-3xl font-bold text-gray-900">{featuredMember.name}</h3>
-            <p className="text-xl text-blue-600">{featuredMember.role}</p>
-          </div>
+          <Card className="w-full lg:w-4/5 mx-auto">
+            <CardHeader floated={false} className="h-80">
+              <img src={featuredMember.image} alt={featuredMember.name} className="w-full h-full object-cover" />
+            </CardHeader>
+            <CardBody className="text-center">
+              <Typography variant="h4" color="blue-gray" className="mb-2">
+                {featuredMember.name}
+              </Typography>
+              <Typography color="blue-gray" className="font-medium">
+                {featuredMember.role}
+              </Typography>
+            </CardBody>
+          </Card>
 
           {/* Right Section: Other Members */}
           <div className="bg-gray-100 rounded-lg p-6 shadow-lg">
@@ -63,6 +74,7 @@ export default function Team() {
                   className="flex items-center space-x-4 border-b border-gray-300 pb-2"
                 >
                   <div className="text-lg font-medium text-gray-700">{member.name}</div>
+                  <div className="text-sm text-gray-500">{member.role}</div>
                 </li>
               ))}
             </ul>
