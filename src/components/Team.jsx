@@ -25,7 +25,7 @@ export default function Team() {
       role: 'Founder/Member',
     },
     {
-      name: 'Madhu Thapa Magar Rana',
+      name: 'Madhu Thapa M.Rana',
       role: 'Founder/Member',
     },
     {
