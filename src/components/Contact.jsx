@@ -146,8 +146,8 @@ export default function Contact() {
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-gray-900">Address</h4>
                   <p className="mt-1 text-gray-600">
-                    Kathmandu Metropolitan City<br />
-                    Ward No. 1, Kathmandu<br />
+                    Chandragiri Municipality<br />
+                    Ward No. 6, Kathmandu<br />
                     Nepal
                   </p>
                 </div>
