@@ -148,7 +148,7 @@ export default function Contact() {
                   <p className="mt-1 text-gray-600">
                     Chandragiri Municipality<br />
                     Ward No. 6, ItaKhel<br />
-                    Kathmandu,Nepal
+                    Kathmandu, Nepal
                   </p>
                 </div>
               </div>

@@ -22,15 +22,15 @@ export default function Team() {
     },
     {
       name: 'Mohan Adhikari',
-      role: 'Member',
+      role: 'Founder/Member',
     },
     {
       name: 'Madhu Thapa Magar Rana',
-      role: 'Member',
+      role: 'Founder/Member',
     },
     {
       name: 'Devu Thapa Magar',
-      role: 'Member',
+      role: 'Founder/Member',
     }
   ];
 
