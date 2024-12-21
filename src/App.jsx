@@ -9,6 +9,7 @@ import BlogPost from './components/BlogPost';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ComingSoon from './components/ComingSoon';
+import Area from './components/Area';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
                 </div>
                 <div id="mission">
                   <Mission />
+                </div>
+                <div id="area">
+                  <Area />
                 </div>
                 <div id="team">
                   <Team />
