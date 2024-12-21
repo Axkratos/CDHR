@@ -37,7 +37,9 @@ export default function Navigation() {
               <span className="block text-lg font-medium text-gray-700">
                 सेन्टर फर डेमोक्रेसी एण्ड ह्युमन राइट्स
               </span>
-              <span className="block text-2xl font-bold text-gray-900">CDHR Nepal</span>
+              <span className="block text-lg font-medium text-gray-700">
+                Center for Democracy and Human Rights
+              </span>
             </div>
           </Link>
         </div>
