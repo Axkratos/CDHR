@@ -65,76 +65,77 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            {isSent ? (
-              <p className="text-green-600 text-lg font-medium text-center">
-                ✅ Your message has been sent successfully!
-              </p>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name Input */}
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Your Name"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                  />
-                </div>
+  {isSent ? (
+    <p className="text-green-600 text-lg font-medium text-center">
+      ✅ Your message has been sent successfully!
+    </p>
+  ) : (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Name Input */}
+      <div>
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          className="w-full border-b border-gray-300 bg-transparent py-2 px-1 focus:outline-none focus:border-blue-500 focus:ring-0"
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          required
+        />
+      </div>
 
-                {/* Email Input */}
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                  />
-                </div>
+      {/* Email Input */}
+      <div>
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          className="w-full border-b border-gray-300 bg-transparent py-2 px-1 focus:outline-none focus:border-blue-500 focus:ring-0"
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          required
+        />
+      </div>
 
-                {/* Message Input */}
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    placeholder="Your Message"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                  />
-                </div>
+      {/* Message Input */}
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+          Message
+        </label>
+        <textarea
+          id="message"
+          placeholder="Enter your message"
+          rows={4}
+          className="w-full border-b border-gray-300 bg-transparent py-2 px-1 focus:outline-none focus:border-blue-500 focus:ring-0"
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          required
+        />
+      </div>
 
-                {/* Error Message */}
-                {error && <p className="text-red-500 text-sm">{error}</p>}
+      {/* Error Message */}
+      {error && <p className="text-red-500 text-sm">{error}</p>}
 
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
-                    loading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'
-                  } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
-                  disabled={loading}
-                >
-                  {loading ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
-            )}
-          </div>
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+          loading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'
+        } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
+        disabled={loading}
+      >
+        {loading ? 'Sending...' : 'Send Message'}
+      </button>
+    </form>
+  )}
+</div>
+
 
           {/* Contact Details */}
           <div className="bg-white rounded-lg shadow-lg p-8">
