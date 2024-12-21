@@ -35,10 +35,10 @@ export default function Navigation() {
           <Link to="/" className="flex items-center">
             <img src={logo} alt="CDHR Nepal Logo" className="w-14 h-auto" />
             <div className="ml-3">
-              <span className="block text-lg font-bold text-gray-900">
+              <span className="block text-2xl font-bold text-gray-900">
                 सेन्टर फर डेमोक्रेसी एण्ड ह्युमन राइट्स
               </span>
-              <span className="block text-lg font-bold text-gray-900">
+              <span className="block text-2xl font-bold text-blue-600">
                 Center for Democracy and Human Rights
               </span>
             </div>
