@@ -11,7 +11,7 @@ export default function BlogPost() {
       content:
         'Grassroots movements have played a pivotal role in shaping the future of democratic governance in Nepal. This blog explores the impact of these movements and how they strengthen local democracy.',
       date: 'Mar 16, 2024',
-      image: 'https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/democracy.jpg',
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ export default function BlogPost() {
       content:
         'Empowering communities through education and awareness of fundamental human rights is essential for building a democratic society.',
       date: 'Mar 12, 2024',
-      image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/flag.jpg',
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ export default function BlogPost() {
       content:
         'Engaging the next generation in democratic processes ensures a sustainable future. Learn about the initiatives encouraging youth participation.',
       date: 'Mar 8, 2024',
-      image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/plant.jpg',
     },
   ];
 

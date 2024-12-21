@@ -52,9 +52,9 @@ export default function Blog() {
               </div>
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-blue-600">
+                  {/* <p className="text-sm font-medium text-blue-600">
                     <time dateTime={post.date}>{post.date}</time>
-                  </p>
+                  </p> */}
                   <h3 className="mt-2 text-xl font-semibold text-gray-900">{post.title}</h3>
                   <p className="mt-3 text-base text-gray-500">{post.content.slice(0, 100)}...</p>
                 </div>
