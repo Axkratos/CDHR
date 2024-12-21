@@ -147,8 +147,8 @@ export default function Contact() {
                   <h4 className="text-lg font-medium text-gray-900">Address</h4>
                   <p className="mt-1 text-gray-600">
                     Chandragiri Municipality<br />
-                    Ward No. 6, Kathmandu<br />
-                    Nepal
+                    Ward No. 6, ItaKhel<br />
+                    Kathmandu,Nepal
                   </p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function Contact() {
                 <Phone className="h-6 w-6 text-blue-600 mt-1" />
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-gray-900">Phone</h4>
-                  <p className="mt-1 text-gray-600">+977-1-4XXXXXX</p>
+                  <p className="mt-1 text-gray-600">+977-9840807497</p>
                 </div>
               </div>
 
@@ -167,7 +167,7 @@ export default function Contact() {
                 <Mail className="h-6 w-6 text-blue-600 mt-1" />
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-gray-900">Email</h4>
-                  <p className="mt-1 text-gray-600">info@cdhr.org.np</p>
+                  <p className="mt-1 text-gray-600">cdhr@ntc.net.np</p>
                 </div>
               </div>
             </div>
