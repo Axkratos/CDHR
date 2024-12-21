@@ -33,9 +33,7 @@ function App() {
                 <div id="area">
                   <Area />
                 </div>
-                <div id="team">
-                  <Team />
-                </div>
+                
                 <div id="blog">
                   <Blog />
                 </div>
@@ -48,6 +46,7 @@ function App() {
 
           {/* Blog post page */}
           <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/team" element={<Team />} />
 
           <Route path="*" element={<ComingSoon />} />
         </Routes>

@@ -1,27 +1,31 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '/logo.png';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navigation = [
     { name: 'Home', href: '#home' },
     { name: 'Mission', href: '#mission' },
     { name: 'Area', href: '#area' },
-    { name: 'Team', href: '#team' },
+    { name: 'Team', href: '/team' },
     { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ];
 
   const handleNavigation = (href) => {
-    if (location.pathname === '/') {
+    if (href === '/team') {
+      // Navigate to the /team route
+      navigate('/team');
+    } else if (location.pathname === '/') {
       // Smooth scroll if on the home page
       document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Redirect to home page
+      // Redirect to the home page and navigate to the section
       window.location.href = `/${href}`;
     }
     setIsOpen(false); // Close mobile menu
@@ -35,10 +39,10 @@ export default function Navigation() {
           <Link to="/" className="flex items-center">
             <img src={logo} alt="CDHR Nepal Logo" className="w-14 h-auto" />
             <div className="ml-3">
-              <span className="block text-2xl font-bold text-gray-900">
+              <span className="block text-lg lg:text-2xl font-bold text-gray-900">
                 सेन्टर फर डेमोक्रेसी एण्ड ह्युमन राइट्स
               </span>
-              <span className="block text-2xl font-bold text-blue-600">
+              <span className="block text-lg lg:text-2xl font-bold text-blue-600">
                 Center for Democracy and Human Rights
               </span>
             </div>
@@ -50,7 +54,7 @@ export default function Navigation() {
           {navigation.map((item) => (
             <button
               key={item.name}
-              className="text-lg font-medium text-gray-700 hover:text-blue-600 transition"
+              className="text-base lg:text-lg font-medium text-gray-700 hover:text-blue-600 transition"
               onClick={() => handleNavigation(item.href)}
             >
               {item.name}
@@ -75,7 +79,7 @@ export default function Navigation() {
           {navigation.map((item) => (
             <button
               key={item.name}
-              className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200 transition"
+              className="block px-6 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200 transition"
               onClick={() => handleNavigation(item.href)}
             >
               {item.name}
