@@ -35,18 +35,19 @@ export default function Navigation() {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo Section */}
-        <div className="flex items-center">
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="CDHR Nepal Logo" className="w-14 h-auto" />
-            <div className="ml-3">
-              <span className="block text-lg lg:text-2xl font-bold text-gray-900">
-                सेन्टर फर डेमोक्रेसी एण्ड ह्युमन राइट्स
-              </span>
-              <span className="block text-lg lg:text-2xl font-bold text-blue-600">
-                Center for Democracy and Human Rights
-              </span>
-            </div>
-          </Link>
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => navigate('/')} // Navigate to home when clicked
+        >
+          <img src={logo} alt="CDHR Nepal Logo" className="w-14 h-auto" />
+          <div className="ml-3">
+            <span className="block text-lg lg:text-2xl font-bold text-gray-900">
+              सेन्टर फर डेमोक्रेसी एण्ड ह्युमन राइट्स
+            </span>
+            <span className="block text-lg lg:text-2xl font-bold text-blue-600">
+              Center for Democracy and Human Rights
+            </span>
+          </div>
         </div>
 
         {/* Desktop Navigation */}
