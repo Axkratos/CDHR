@@ -27,14 +27,14 @@ export default function Contact() {
     // Send Email using EmailJS
     emailjs
       .send(
-        'service_jp1thng', // Replace with your EmailJS Service ID
-        'template_3e7qr4s', // Replace with your EmailJS Template ID
+        'service_haztk37', // Replace with your EmailJS Service ID
+        'template_17all6j', // Replace with your EmailJS Template ID
         {
           from_name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        'iwvBmY4C_3HwH-KDZ' // Replace with your EmailJS Public Key
+        '0U9cdaZBwrEXkOL0j' // Replace with your EmailJS Public Key
       )
       .then(
         (response) => {
