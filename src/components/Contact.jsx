@@ -27,7 +27,7 @@ export default function Contact() {
     // Send Email using EmailJS
     emailjs
   .send(
-    import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID
+    import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID in env
     import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID
     {
       from_name: formData.name,
