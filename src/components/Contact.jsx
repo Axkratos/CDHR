@@ -26,16 +26,16 @@ export default function Contact() {
 
     // Send Email using EmailJS
     emailjs
-      .send(
-        'service_haztk37', // Replace with your EmailJS Service ID
-        'template_17all6j', // Replace with your EmailJS Template ID
-        {
-          from_name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-        '0U9cdaZBwrEXkOL0j' // Replace with your EmailJS Public Key
-      )
+  .send(
+    import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID
+    {
+      from_name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    },
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY // Public Key
+  )
       .then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
