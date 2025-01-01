@@ -5,7 +5,7 @@ export default function StrategicAreas() {
   const areas = [
     {
       icon: FaBalanceScale,
-      title: 'Democracy',
+      title: 'Participatory Democracy',
       description:
         'Fostering a culture where democratic values thrive, ensuring the voices of all citizens are heard and respected.',
     },
@@ -17,13 +17,13 @@ export default function StrategicAreas() {
     },
     {
       icon: FaVoteYea,
-      title: 'Election',
+      title: 'Free and Fair Election',
       description:
         'Supporting free, fair, and transparent elections to uphold the pillars of democracy and citizens’ trust in governance.',
     },
     {
       icon: FaLandmark,
-      title: 'Governance',
+      title: 'Good Governance',
       description:
         'Strengthening governance systems to promote accountability, integrity, and efficient public service delivery.',
     },
@@ -33,7 +33,7 @@ export default function StrategicAreas() {
     <section id="strategic-areas" className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Our Strategic Thrust Areas</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Our Strategic Thematic Areas</h2>
           <p className="mt-6 max-w-3xl text-xl text-gray-500 lg:mx-auto">
             Focused on driving impactful change across key areas essential to building a stronger and more equitable society.
           </p>
@@ -45,12 +45,12 @@ export default function StrategicAreas() {
             return (
               <div
                 key={area.title}
-                className="relative bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow"
+                className="relative bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow text-center"
               >
-                <div className="absolute -top-8 left-6 flex items-center justify-center h-16 w-16 rounded-full bg-blue-500 text-white">
+                <div className="flex items-center justify-center h-16 w-16 mx-auto rounded-full bg-blue-500 text-white">
                   <Icon className="h-8 w-8" aria-hidden="true" />
                 </div>
-                <h3 className="mt-8 text-2xl font-bold text-gray-900">{area.title}</h3>
+                <h3 className="mt-4 text-2xl font-bold text-gray-900">{area.title}</h3>
                 <p className="mt-4 text-lg text-gray-600">{area.description}</p>
               </div>
             );

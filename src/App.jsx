@@ -1,4 +1,5 @@
 import React from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
@@ -10,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ComingSoon from './components/ComingSoon';
 import Area from './components/Area';
+
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
                 <div id="mission">
                   <Mission />
                 </div>
+                <div id="team">
+                  <Team/>
+                </div>
+
                 <div id="area">
                   <Area />
                 </div>
@@ -37,16 +43,14 @@ function App() {
                 <div id="blog">
                   <Blog />
                 </div>
-                <div id="contact">
-                  <Contact />
-                </div>
+                
               </main>
             }
           />
 
           {/* Blog post page */}
           <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/team" element={<Team />} />
+          <Route path="/contact" element={<Contact />} />
 
           <Route path="*" element={<ComingSoon />} />
         </Routes>

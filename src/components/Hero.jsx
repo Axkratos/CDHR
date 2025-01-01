@@ -1,12 +1,11 @@
 import React from 'react';
-import Hero from '/hero.jpg';
+import HeroImage from '/hero.jpg'; // Renamed to avoid conflict with the component name
+import { useNavigate } from 'react-router-dom'; // Correct hook for navigation
 
 export default function Header() {
+  const navigate = useNavigate(); // Updated to use useNavigate
   const handleGetInvolvedClick = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/contact'); // Correct navigation logic
   };
 
   return (
@@ -14,7 +13,7 @@ export default function Header() {
       <div className="container px-6 py-16 mx-auto">
         <div className="items-center lg:flex">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2 lg:ml-12"> {/* Adjusted spacing with lg:ml-12 */}
+          <div className="w-full lg:w-1/2 lg:ml-12">
             <div className="lg:max-w-lg">
               <h1 className="text-4xl font-bold text-gray-900 lg:text-5xl">
                 Empowering Communities <br />
@@ -37,7 +36,7 @@ export default function Header() {
           <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
             <img
               className="h-72 w-full object-cover sm:h-80 md:h-96 lg:w-full lg:h-full"
-              src={Hero}
+              src={HeroImage}
               alt="Nepal landscape"
             />
           </div>

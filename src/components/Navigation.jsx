@@ -10,20 +10,25 @@ export default function Navigation() {
 
   const navigation = [
     { name: 'Home', href: '#home' },
-    { name: 'Mission', href: '#mission' },
-    { name: 'Area', href: '#area' },
-    { name: 'Team', href: '/team' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About us', href: '#mission' },
+    { name: 'Thematic Areas', href: '#area' },
+    { name: 'Events', href: '#blog' },
+    { name: 'Blogs', href: '#blog' },
+    { name: 'Support us', href: '/contact' }, // Updated href
   ];
 
   const handleNavigation = (href) => {
-    if (href === '/team') {
-      // Navigate to the /team route
-      navigate('/team');
+    if (href === '/contact') {
+      // Redirect to the Contact component
+      navigate('/contact');
     } else if (location.pathname === '/') {
-      // Smooth scroll if on the home page
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+      // Smooth scroll with an offset if on the home page
+      const element = document.querySelector(href);
+      if (element) {
+        const yOffset = -80; // Adjust this value based on your navbar's height
+        const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: yPosition, behavior: 'smooth' });
+      }
     } else {
       // Redirect to the home page and navigate to the section
       window.location.href = `/${href}`;
@@ -39,7 +44,7 @@ export default function Navigation() {
           className="flex items-center cursor-pointer"
           onClick={() => navigate('/')} // Navigate to home when clicked
         >
-          <img src={logo} alt="CDHR Nepal Logo" className="w-14 h-auto" />
+          <img src={logo} alt="CDHR Nepal Logo" className="w-20 h-auto" />
           <div className="ml-3">
             <span className="block text-lg lg:text-2xl font-bold text-gray-900">
               सेन्टर फर डेमोक्रेसी एण्ड ह्युमन राइट्स
