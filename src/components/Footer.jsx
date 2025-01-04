@@ -28,9 +28,11 @@ export default function Footer() {
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
-              href="#"
+              href="https://x.com/cdhrnepal2024?t=wSUSWBUL-W-_7ovdjq2wdA&s=09"
               className="text-gray-600 hover:text-blue-500 transition-colors duration-300 text-lg"
               aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-twitter"></i>
             </a>
@@ -42,9 +44,11 @@ export default function Footer() {
               <i className="fab fa-instagram"></i>
             </a>
             <a
-              href="#"
+              href="https://www.youtube.com/@CenterforDemocracyandHumanRigh"
               className="text-gray-600 hover:text-blue-500 transition-colors duration-300 text-lg"
               aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-youtube"></i>
             </a>
