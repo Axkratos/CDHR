@@ -13,7 +13,7 @@ export default function Team() {
   const team = [
     {
       name: 'Deepak Joshi Pokhrel',
-      role: 'Managing Director',
+      role: 'Founder/Managing Director',
       email: 'email: cdhr@ntc.net.np', // Placeholder for email
       phone: 'phone: +977-9840807497', // Placeholder for phone number
     },
@@ -21,11 +21,13 @@ export default function Team() {
       name: 'Bir Bahadur Ale',
       role: 'Founder/Chairperson',
       email: 'email: bir.alenepal@gmail.com', // Placeholder for email
+      phone: 'phone: +977-9764644111', // Added phone number for Bir Bahadur Ale
     },
     {
       name: 'Mohan Adhikari',
       role: 'Founder/Member',
       email: 'email: adhikarimo@gmail.com', // Placeholder for email
+      phone: 'phone: +977-9868834377', // Added phone number for Mohan Adhikari
     },
     {
       name: 'Madhu Thapa M.Rana',
@@ -89,6 +91,7 @@ export default function Team() {
                     <div className="text-sm text-gray-500">({member.role})</div>
                   </div>
                   <div className="text-sm text-gray-400 mt-1">{member.email}</div>
+                  {member.phone && <div className="text-sm text-gray-400 mt-1">{member.phone}</div>}
                 </li>
               ))}
             </ul>
