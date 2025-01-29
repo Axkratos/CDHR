@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ComingSoon from './components/ComingSoon';
 import Area from './components/Area';
+import MissionStatement from './components/MissionStatement';
 
 
 function App() {
@@ -32,9 +33,7 @@ function App() {
                 <div id="mission">
                   <Mission />
                 </div>
-                <div id="team">
-                  <Team/>
-                </div>
+                
 
                 <div id="area">
                   <Area />
@@ -51,6 +50,9 @@ function App() {
           {/* Blog post page */}
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/mission-statement" element={<MissionStatement />} />
+          <Route path="/team" element={<Team />} />
+
 
           <Route path="*" element={<ComingSoon />} />
         </Routes>
